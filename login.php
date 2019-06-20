@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$loginname = test_input($_POST["loginname"]);
 		$loginpass = test_input($_POST["loginpass"]);
@@ -37,6 +38,7 @@
 	    	$message = "User not registered";
 	    }
 	}
+	$_SESSION['username'] = $loginname;
 ?>
 <!DOCTYPE html>
 <html>
