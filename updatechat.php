@@ -1,6 +1,7 @@
 <?php
+	session_start();
+	$loginname = $_SESSION['username'];  
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		$name = test_input($_POST["name"]);
 		$chat = test_input($_POST["chat"]);
 	}
 	function test_input($data) {
@@ -9,13 +10,13 @@
 	  $data = htmlspecialchars($data);
 	  return $data;
 	}
-	if ($name!="" and $chat !=""){
+	if ($loginname!="" and $chat !=""){
 		$servername = "localhost";
 		$username = "root";
 		$password = "";
 		$dbname = "people";
 		$conn = new mysqli($servername, $username, $password,$dbname);
-		$totchat = $name."- ".$chat;
+		$totchat = $loginname."- ".$chat;
 		$sql = "INSERT INTO chat (data) VALUES ('$totchat')";
 		if ($conn->query($sql) === TRUE) {
 		    echo "New chat record created successfully";
