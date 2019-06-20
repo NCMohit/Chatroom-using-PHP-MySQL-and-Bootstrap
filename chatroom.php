@@ -37,14 +37,11 @@
 	</div>
 	<form method="post" action="updatechat.php">
 		<div class="form-group">
-			<label for="usr">Username:</label>
-			<input type="text" class="form-control" id="usr" name="name">
-		</div>
-		<div class="form-group">
 			<label for="usr">Text:</label>
 			<input type="text" class="form-control" id="usr" name="chat">
 		</div>
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
+	<br><a href="chatroom.php"><button type="submit" class="btn btn-primary">Refresh Chat</button></a>
 </body>
 </html>
