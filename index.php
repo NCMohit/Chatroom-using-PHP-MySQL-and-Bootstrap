@@ -45,7 +45,7 @@
 <body>
 	<div class="container">
 		<div class="jumbotron">
-			<h1 align="center">Mohit's Login Page</h1>
+			<h1 align="center">Mohit's ChatRoom Server</h1>
 			<div style="text-align: center;">
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Login">Login</button>
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Register">Register</button>
